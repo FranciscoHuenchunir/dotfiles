@@ -1,0 +1,93 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "show_minimap": true,
+  "show_tabs": true,
+  "show_statusbar": true,
+  "show_titlebar": true,
+  "show_toolbar": true,
+  "show_sidebar": true,
+  "sidebar_width": 300,
+  "always_show_minimap": true,
+  "auto_save": true,
+  "font_size": 16,
+  "line_height": 1.5,
+  "tab_size": 2,
+  "indent_size": 2,
+  "use_tabs": false,
+  "wrap_width": 80,
+  "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+  "cursor_blink_style": "blink",
+  "cursor_style": "block",
+  "cursor_width": 2,
+  "cursor_animation_style": "smooth",
+  "autocomplete": true,
+  "autocomplete_delay": 500,
+  "autocomplete_max_visible": 10,
+  "autocomplete_persistent": true,
+  "languages": {
+    "Java": {
+      "show_inline_completions": true
+    }
+  },
+  "show_inline_completions": true,
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true
+        }
+      }
+    },
+    "jdtls": {
+      "settings": {
+        "version": "5.0.1", // Versión del servidor JDTLS
+        "java.jdt.ls.lombokSupport.enabled": true
+      },
+      "initialization_options": {
+        "settings": {
+          "java": {
+            "home": "/usr/lib/jvm/openlogic-openjdk-17-hotspot-amd64",
+            "format": {
+              "enabled": true // Habilitar formateo de código
+            },
+            "saveActions": {
+              "organizeImports": true // Organizar importaciones al guardar
+            }
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "VictorMono Nerd Font Mono",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha - No Italics"
+  },
+  "soft_wrap": "editor_width",
+  "current_line_highlight": "all",
+
+  "completion": {
+    "enabled": true,
+    "trigger": "tab"
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "label": "Run Spring Boot Application",
+    "description": "Starts the Spring Boot application using the mvn spring-boot:run command.",
+    "command": "mvn spring-boot:run",
+    "when": "fileExists('pom.xml')",
+    "hide": "on_success"
+  },
+  {
+    "label": "Debug Spring Boot Application",
+    "description": "Starts the Spring Boot application in debug mode with JVM debugging enabled.",
+    "command": "mvn spring-boot:run -Dspring-boot.run.fork=false -Ddebug",
+    "when": "fileExists('pom.xml')",
+    "hide": "on_success"
+  },
+  {
+    "label": "Compile Maven Project",
+    "description": "Compiles the project's source code.",
+    "command": "mvn compile",
+    "when": "fileExists('pom.xml')",
+    "hide": "on_success"
+  },
+  {
+    "label": "Clean and Install Maven Project",
+    "description": "Cleans the target directory and installs the project to the local Maven repository.",
+    "command": "mvn clean install",
+    "when": "fileExists('pom.xml')",
+    "hide": "on_success"
+  },
+  {
+    "label": "Compile with Debug Logs",
+    "description": "Compiles the project with debug-level logs enabled for troubleshooting.",
+    "command": "mvn compile -X",
+    "when": "fileExists('pom.xml')",
+    "hide": "on_success"
+  },
+  {
+    "label": "Compile with Detailed Error Logs",
+    "description": "Compiles the project and provides detailed error information in case of a failure.",
+    "command": "mvn compile -e",
+    "when": "fileExists('pom.xml')",
+    "hide": "on_success"
+  },
+  {
+    "label": "Package Maven Project",
+    "description": "Packages the project into a JAR or WAR file, depending on the configuration in pom.xml.",
+    "command": "mvn package",
+    "when": "fileExists('pom.xml')",
+    "hide": "on_success"
+  }
+]
